@@ -34,14 +34,13 @@ namespace AirlineTickets
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpBook = new System.Windows.Forms.TabPage();
             this.tpReview = new System.Windows.Forms.TabPage();
-            this.tpCheckout = new System.Windows.Forms.TabPage();
             this.lblHeading = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbDepature = new System.Windows.Forms.ComboBox();
             this.gbDepature = new System.Windows.Forms.GroupBox();
@@ -54,18 +53,24 @@ namespace AirlineTickets
             this.rbThree = new System.Windows.Forms.RadioButton();
             this.rbFour = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.tpCheckout = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbPersonalInfo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpBook.SuspendLayout();
+            this.tpReview.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbDepature.SuspendLayout();
             this.gbDestination.SuspendLayout();
             this.gbTickets.SuspendLayout();
+            this.tpCheckout.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPersonalInfo
             // 
-            this.gbPersonalInfo.Controls.Add(this.textBox1);
+            this.gbPersonalInfo.Controls.Add(this.txtEmail);
             this.gbPersonalInfo.Controls.Add(this.label2);
             this.gbPersonalInfo.Controls.Add(this.lblLastName);
             this.gbPersonalInfo.Controls.Add(this.txtLastName);
@@ -89,7 +94,7 @@ namespace AirlineTickets
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1451, 994);
+            this.tabControl1.Size = new System.Drawing.Size(1451, 826);
             this.tabControl1.TabIndex = 1;
             // 
             // tpBook
@@ -106,7 +111,7 @@ namespace AirlineTickets
             this.tpBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpBook.Name = "tpBook";
             this.tpBook.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tpBook.Size = new System.Drawing.Size(1443, 961);
+            this.tpBook.Size = new System.Drawing.Size(1443, 793);
             this.tpBook.TabIndex = 0;
             this.tpBook.Text = "Book ";
             this.tpBook.UseVisualStyleBackColor = true;
@@ -115,33 +120,23 @@ namespace AirlineTickets
             // 
             this.tpReview.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tpReview.BackgroundImage")));
             this.tpReview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tpReview.Controls.Add(this.label4);
+            this.tpReview.Controls.Add(this.listBox1);
             this.tpReview.Location = new System.Drawing.Point(4, 29);
             this.tpReview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpReview.Name = "tpReview";
             this.tpReview.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tpReview.Size = new System.Drawing.Size(1443, 961);
+            this.tpReview.Size = new System.Drawing.Size(1443, 793);
             this.tpReview.TabIndex = 1;
             this.tpReview.Text = "Review";
             this.tpReview.UseVisualStyleBackColor = true;
-            // 
-            // tpCheckout
-            // 
-            this.tpCheckout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tpCheckout.BackgroundImage")));
-            this.tpCheckout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tpCheckout.Location = new System.Drawing.Point(4, 29);
-            this.tpCheckout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tpCheckout.Name = "tpCheckout";
-            this.tpCheckout.Size = new System.Drawing.Size(1443, 961);
-            this.tpCheckout.TabIndex = 2;
-            this.tpCheckout.Text = "Checkout";
-            this.tpCheckout.UseVisualStyleBackColor = true;
             // 
             // lblHeading
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.ForeColor = System.Drawing.Color.Navy;
-            this.lblHeading.Location = new System.Drawing.Point(429, 4);
+            this.lblHeading.Location = new System.Drawing.Point(351, 4);
             this.lblHeading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(575, 60);
@@ -191,13 +186,13 @@ namespace AirlineTickets
             this.label2.TabIndex = 4;
             this.label2.Text = "Email Address:";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 169);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 30);
-            this.textBox1.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(122, 169);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(177, 30);
+            this.txtEmail.TabIndex = 5;
             // 
             // groupBox1
             // 
@@ -214,6 +209,14 @@ namespace AirlineTickets
             // cbDepature
             // 
             this.cbDepature.FormattingEnabled = true;
+            this.cbDepature.Items.AddRange(new object[] {
+            "Bloemfontein",
+            "Johannesburg",
+            "Cape Town",
+            "George",
+            "Kimberly",
+            "Margate",
+            "Sishen"});
             this.cbDepature.Location = new System.Drawing.Point(6, 29);
             this.cbDepature.Name = "cbDepature";
             this.cbDepature.Size = new System.Drawing.Size(186, 26);
@@ -242,6 +245,14 @@ namespace AirlineTickets
             // cbDestination
             // 
             this.cbDestination.FormattingEnabled = true;
+            this.cbDestination.Items.AddRange(new object[] {
+            "Bloemfontein",
+            "Johannesburg",
+            "Cape Town",
+            "George",
+            "Kimberly",
+            "Margate",
+            "Sishen"});
             this.cbDestination.Location = new System.Drawing.Point(6, 29);
             this.cbDestination.Name = "cbDestination";
             this.cbDestination.Size = new System.Drawing.Size(186, 26);
@@ -325,12 +336,61 @@ namespace AirlineTickets
             this.button1.TabIndex = 3;
             this.button1.Text = "Book";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tpCheckout
+            // 
+            this.tpCheckout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tpCheckout.BackgroundImage")));
+            this.tpCheckout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tpCheckout.Controls.Add(this.label3);
+            this.tpCheckout.Location = new System.Drawing.Point(4, 29);
+            this.tpCheckout.Margin = new System.Windows.Forms.Padding(4);
+            this.tpCheckout.Name = "tpCheckout";
+            this.tpCheckout.Size = new System.Drawing.Size(1443, 793);
+            this.tpCheckout.TabIndex = 2;
+            this.tpCheckout.Text = "Checkout";
+            this.tpCheckout.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(7, 134);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(753, 564);
+            this.listBox1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(336, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(575, 60);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Vanderbjilpark Airline";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(336, 4);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(575, 60);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Vanderbjilpark Airline";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1471, 1000);
+            this.ClientSize = new System.Drawing.Size(1475, 832);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -341,11 +401,15 @@ namespace AirlineTickets
             this.tabControl1.ResumeLayout(false);
             this.tpBook.ResumeLayout(false);
             this.tpBook.PerformLayout();
+            this.tpReview.ResumeLayout(false);
+            this.tpReview.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.gbDepature.ResumeLayout(false);
             this.gbDestination.ResumeLayout(false);
             this.gbTickets.ResumeLayout(false);
             this.gbTickets.PerformLayout();
+            this.tpCheckout.ResumeLayout(false);
+            this.tpCheckout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -356,13 +420,12 @@ namespace AirlineTickets
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpBook;
         private System.Windows.Forms.Label lblHeading;
-        private System.Windows.Forms.TabPage tpCheckout;
         private System.Windows.Forms.TabPage tpReview;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox gbDepature;
@@ -376,6 +439,10 @@ namespace AirlineTickets
         private System.Windows.Forms.RadioButton rbThree;
         private System.Windows.Forms.RadioButton rbTwo;
         private System.Windows.Forms.RadioButton rbOne;
+        private System.Windows.Forms.TabPage tpCheckout;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
